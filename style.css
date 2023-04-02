@@ -1,0 +1,126 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+}
+
+body {
+    background: linear-gradient(0.9turn, #fd2bc9, #000000);
+    background-position: top center;
+    background-size: 2500px 1500px;
+
+    
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: #1a021a;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+   -webkit-appearance:none;
+   margin:0;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+#container {
+    /*border: 1px solid red; borda vermelha*/
+    width: 360px;
+    height: 712px;
+    margin: 56px auto 0px;
+    text-align: center;
+    padding: 0 24px;/*0 é top e bottom e 24px right e left*/
+}
+#profile  {
+    width: 360px;
+    height: 712px;
+    margin: 56px auto 0px;
+    text-align: center;
+    padding: 0 24px;/*0 é top e bottom e 24px right e left*/
+    font-weight: 500px;
+    line-height: 24px;
+}
+#titulo{
+    text-align: center;
+}
+#entradatext{
+    text-align: center;
+}
+#quad{
+    width: 400px;
+    height: 500px;
+    border-radius: 10%;
+    background-color: aliceblue;
+}
+#entradaBut{
+    margin-left: 40px;
+}
+
+
+#tabDiv{
+    width: 100px;
+    height: 300px;
+    margin-left: 100px;
+    
+}
+
+
+ul {
+   list-style: none;
+   display: flex;
+   flex-direction: column; /* flexibilidade da coluna*/
+   gap: 16px; /* espaço entre cada um da lista*/
+   padding: 24px 0px;
+}
+ul li a {
+    display: flex;
+    align-items: center; /*alinhamento na vertical */
+    justify-content: center; /*alinhamento na horiz */
+    padding: 16px 24px; /* 16px é top e bottom e 24px é right e left*/
+
+    background: linear-gradient(0.9turn, #f8f7f8, #9e9595);/* 10% de transparencia */
+    border: black;/* 50% de transparencia */     /**/
+    border-radius: 8px;
+    backdrop-filter: blur(4px); /*nem todo navegador aceita blur*/
+    -webkit-backdrop-filter: blur(4px);
+
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+#dM, #dm,#sM,#sF,#T,#tab{
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    text-align: center;
+    align-items: center; /*alinhamento na vertical */
+    justify-content: center; /*alinhamento na horiz */
+    padding: 16px 80px; /* 16px é top e bottom e 24px é right e left*/
+    background-color: rgb(236, 234, 231);/* 10% de transparencia */
+    border: 1px solid black;/* 50% de transparencia */     /**/
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+#calculaLosangoButtom, #calculaSalarioButtom, #calculaTabuadaButtom{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 50px;
+    align-items: center; /*alinhamento na vertical */
+    justify-content: center; /*alinhamento na horiz */
+    padding: 16px 80px; /* 16px é top e bottom e 24px é right e left*/
+    background-color: rgb(236, 234, 231);/* 10% de transparencia */
+    border: 5px solid black;/* 50% de transparencia */     /**/
+    border-radius: 30px;
+ }
+
+#center{
+    margin-left: 50px;
+}
+
+
