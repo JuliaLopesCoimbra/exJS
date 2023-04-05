@@ -35,3 +35,8 @@ function calculaTabuada(){
     Number(document.getElementById('calc13j').innerHTML = tab + " x 10 = " + calcJ )
 
 }
+function calculaIdade(){
+    let idade = new Date(document.getElementById('DataNasci').value);
+    let calc = Math.floor((Date.now() - idade) / (31557600000));
+    Number(document.getElementById('ex14').innerHTML = "tem idade em anos = " + calc + " anos")
+}

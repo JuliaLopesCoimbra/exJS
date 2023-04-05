@@ -1,6 +1,5 @@
 body {
     display: grid;
-    place-items: center;
     height: 100vh;
 
 }
@@ -15,7 +14,8 @@ body {
 
 body * {
     font-family: 'Inter', sans-serif;
-    color: #1a021a;
+    margin: 0;
+    padding: 0;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button{
@@ -29,20 +29,37 @@ table, th, td {
 
 #container {
     /*border: 1px solid red; borda vermelha*/
-    width: 360px;
-    height: 712px;
-    margin: 56px auto 0px;
+    width: 1000px;
+    height: 1500px;
+    margin-left: 100px;
+    margin-right: 100px;
     text-align: center;
     padding: 0 24px;/*0 é top e bottom e 24px right e left*/
 }
 #profile  {
-    width: 360px;
-    height: 712px;
-    margin: 56px auto 0px;
+    width: 900px;
+    height: 1200px;
+    margin-left: 0%;
+    margin-right: 100px;
     text-align: center;
     padding: 0 24px;/*0 é top e bottom e 24px right e left*/
     font-weight: 500px;
     line-height: 24px;
+}
+#exer01{
+    width: 400px;
+    height: 1100px;
+    display: inline-block;
+    
+
+}
+
+#exer02{
+    width: 400px;
+    height: 1100px;
+    display: inline-block;
+
+
 }
 #titulo{
     text-align: center;
@@ -55,6 +72,9 @@ table, th, td {
     height: 500px;
     border-radius: 10%;
     background-color: aliceblue;
+    margin-left: 400px;
+    margin-top: 50px;
+
 }
 #entradaBut{
     margin-left: 40px;
@@ -93,7 +113,7 @@ ul li a {
     transition: background 0.2s;
 }
 
-#dM, #dm,#sM,#sF,#T,#tab{
+#dM, #dm,#sM,#sF,#T,#tab,#DataNasci,#ano{
     display: flex;
     margin-bottom: 50px;
     margin-left: 30px;
@@ -107,7 +127,7 @@ ul li a {
     text-decoration: none;
     transition: background 0.2s;
 }
-#calculaLosangoButtom, #calculaSalarioButtom, #calculaTabuadaButtom{
+#calculaLosangoButtom, #calculaSalarioButtom, #calculaTabuadaButtom, #calculaIdadeButtom{
     display: flex;
     margin-top: 50px;
     margin-left: 50px;
