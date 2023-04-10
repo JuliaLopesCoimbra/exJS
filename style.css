@@ -69,11 +69,15 @@ table, th, td {
 }
 #quad{
     width: 400px;
-    height: 500px;
+    height: 600px;
     border-radius: 10%;
     background-color: aliceblue;
-    margin-left: 400px;
+    margin-left: 390px;
     margin-top: 50px;
+    align-items: center;
+    text-align: center;
+    border: solid black 5px;
+
 
 }
 #entradaBut{
@@ -113,7 +117,8 @@ ul li a {
     transition: background 0.2s;
 }
 
-#dM, #dm,#sM,#sF,#T,#tab,#DataNasci,#ano{
+#dM, #dm,#sM,#sF,#T,#tab,#DataNasci,#ano,#nota1,#nota2,#nota3,#nota4,#nota1tab,#nota2tab,#n1M,#n2M,#n1,#n2,#n3,
+#n1E,#n2E,#n3E,#n1E2,#n2E2,#n3E2,#sal,#sal2,#SM{
     display: flex;
     margin-bottom: 50px;
     margin-left: 30px;
@@ -127,7 +132,8 @@ ul li a {
     text-decoration: none;
     transition: background 0.2s;
 }
-#calculaLosangoButtom, #calculaSalarioButtom, #calculaTabuadaButtom, #calculaIdadeButtom{
+#calculaLosangoButtom, #calculaSalarioButtom, #calculaTabuadaButtom, #calculaIdadeButtom, #calculaNotaButtom, 
+#calculaNotaTabButtom,#calculaMaiorMenorButtom,#calculaMaiorMenorButtom2,#calculaEscolha,#calculaEscolha2,#calculaButtom{
     display: flex;
     margin-top: 50px;
     margin-left: 50px;
