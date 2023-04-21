@@ -191,3 +191,205 @@ function calculaSM(){
         document.getElementById("calc09").innerHTML = "Valor do Salário com aumento de crétidos de 10% = "+calc 
     }
 }
+function calculaCarro(){
+    let car = Number(document.getElementById("carro").value);
+    let calc
+    if(car < 12000){
+        calc = car+(car*0.05) 
+        document.getElementById("calc10").innerHTML = "O valor do carro juntando com a porcentagem do distribuidor é R$ = "+calc
+    }else if(car >=12000 && car <=25000){
+        calc = car+(car*0.10)+(car*0.15)
+        document.getElementById("calc10").innerHTML = "O valor do carro juntando com a porcentagem do distribuidor e dos impostos é R$ = "+calc
+    }else if(car > 25000){
+        calc = car+(car*0.20)+(car*0.15)
+        document.getElementById("calc10").innerHTML = "O valor do carro juntando com a porcentagem do distribuidor e dos impostos é R$ = "+calc
+    }
+}
+function calculaSalarioNovo(){
+    let s = Number(document.getElementById("SalarioNovo").value);
+    let calc 
+    if(s<=300){
+        calc = s+(s*0.15)
+        document.getElementById("calc11").innerHTML = "O novo salário será = R$" + calc
+    }else if(s>300 && s<600){
+        calc = s+(s*0.1)
+        document.getElementById("calc11").innerHTML = "O novo salário será = R$" + calc
+    }else if(s >= 600 && s<=900){
+        calc = s+(s*0.05)
+        document.getElementById("calc11").innerHTML = "O novo salário será = R$" + calc
+    }else if(s>900){
+        document.getElementById("calc11").innerHTML = "O salário permanecerá com o mesmo valor de = R$" + s
+
+    }
+}
+function calculaSalarioGratidao(){
+    let s = Number(document.getElementById("SalarioGratidao").value);
+    let calc 
+    if(s<=350){
+        calc = s-(s*0.07)+100
+        document.getElementById("calc12").innerHTML = "O novo salário será = R$" + calc
+    }else if(s>350 && s<600){
+        calc = s-(s*0.07)+75
+        document.getElementById("calc12").innerHTML = "O novo salário será = R$" + calc
+    }else if(s >= 600 && s<=900){
+        calc = s-(s*0.07)+50
+        document.getElementById("calc12").innerHTML = "O novo salário será = R$" + calc
+    }else if(s>900){
+        calc = s-(s*0.07)+35
+        document.getElementById("calc12").innerHTML = "O novo salário será = R$" + calc
+
+    }
+}
+function calculaNovoPreco(){
+    let n = Number(document.getElementById("NovoPreco").value);
+    let calc 
+    if(n<=50){
+        calc = n+(n*0.05)
+    }else if(n>50 && n<=100){
+        calc = n+(n*0.1)
+    }else if(n > 100 ){
+        calc = n+(n*0.15)
+        
+    }
+    if(calc <=80){
+        document.getElementById("calc13").innerHTML = "O novo preço do produto será = R$" + calc + " e é classificado como BARATO"
+    }else if(calc>80 && calc<=120){
+        document.getElementById("calc13").innerHTML = "O novo preço do produto será = R$" + calc + " e é classificado como NORMAL"
+    }else if(calc>120 && calc<=200){
+        document.getElementById("calc13").innerHTML = "O novo preço do produto será = R$" + calc + " e é classificado como CARO"
+    }else if(calc>200){
+        document.getElementById("calc13").innerHTML = "O novo preço do produto será = R$" + calc + " e é classificado como MUITO CARO"
+    }
+}
+function calculaNovoSalario(){
+    let s = Number(document.getElementById("NovoSalario").value);
+    let calc 
+    if(s<=300){
+        calc = s+(s*0.5)
+        document.getElementById("calc14").innerHTML = "O novo salário será = R$" + calc
+    }else if(s>300 && s<=500){
+        calc = s+(s*0.4)
+        document.getElementById("calc14").innerHTML = "O novo salário será = R$" + calc
+    }else if(s > 500 && s<=700){
+        calc = s+(s*0.3)
+        document.getElementById("calc14").innerHTML = "O novo salário será = R$" + calc
+    }else if(s>700 && s<=800){
+        calc = s+(s*0.2)
+        document.getElementById("calc14").innerHTML = "O novo salário será = R$" + calc
+    }else if(s>800 && s<=1000){
+        calc = s+(s*0.1)
+        document.getElementById("calc14").innerHTML = "O novo salário será = R$" + calc
+    }else if(s>1000){
+        calc = s+(s*0.05)
+        document.getElementById("calc14").innerHTML = "O novo salário será = R$" + calc
+    }
+}
+function calculaInvestimento(){
+    let inv = Number(document.getElementById("Investimento").value);
+    let inv2 = Number(document.getElementById("Investimento2").value);
+    let calc
+    switch(inv){
+        case 1:
+            calc = (inv2*0.03)
+            document.getElementById("calc15").innerHTML = "O valor do investimento R$" + inv2 + " irá subir R$" +calc+ " ao mês"
+            break;
+        case 2:
+            calc = (inv2*0.04)
+            document.getElementById("calc15").innerHTML = "O valor do investimento R$" + inv2 + " irá subir R$" +calc+ " ao mês"
+            break;
+        default:
+            document.getElementById("calc15").innerHTML = "Opção Inválida"
+
+    }
+}
+function calculaCodigo(){
+    let valor = Number(document.getElementById("preco").value);
+    let cod = Number(document.getElementById("codigo").value);
+    let calc 
+    let calc1
+    if(valor <=30){
+        document.getElementById("calc16").innerHTML = "O produto com o código " + cod + " não possui desconto, permanecendo no valor de R$" + valor
+    }else if(valor>30 && valor<=100){
+        calc = (valor*0.1)
+        calc1 = (valor*0.1)-valor
+        document.getElementById("calc16").innerHTML = "O produto com o código " + cod + " possui desconto de R$"+ calc+", permanecendo no valor de R$" + calc1
+    }else if(valor>100){
+        calc = (valor*0.15)
+        calc1 = valor-(valor*0.15)
+        document.getElementById("calc16").innerHTML = "O produto com o código " + cod + " possui desconto de R$"+ calc+", permanecendo no valor de R$" + calc1
+    }
+}
+function calculaSenha(){
+    let senha = Number(document.getElementById("senha").value);
+    if(senha == 4531){
+        document.getElementById("calc17").innerHTML = "Acessado!"
+       } else {
+        document.getElementById("calc17").innerHTML = "Não foi acessado!"
+       }
+}
+function calculaMaioridade(){
+    let i = Number(document.getElementById("idade").value);
+    if(i >=18){
+        document.getElementById("calc18").innerHTML = "Você é de Maioridade"
+       } else {
+        document.getElementById("calc18").innerHTML = "Você não é de Maioridade"
+       }
+}
+function calculaPesoIdeal(){
+    let sexo = (document.getElementById("sexo").value);
+    let altura = Number(document.getElementById("h").value);
+    let calc
+    if(sexo == "Masculino" || sexo == "masculino"){
+        calc = (72.7*altura)-58
+        document.getElementById("calc19").innerHTML = "O peso masculino ideal é " + calc
+    }else if(sexo == "Feminino" || sexo == "feminino" ){
+        calc = (62.1*altura)-44.7
+        document.getElementById("calc19").innerHTML = "O peso feminino ideal é " + calc
+    }else{
+        document.getElementById("calc19").innerHTML = "Opção Inválida"
+    }
+}
+function calculaNadador(){
+    let idade = (document.getElementById("nadador").value);
+    if(idade>=5 && idade<=7){
+        document.getElementById("calc20").innerHTML = "Nadador Infantil"
+    }else if(idade>=8 && idade<=10){
+        document.getElementById("calc20").innerHTML = "Nadador Juvenil"
+    }else if(idade>=11 && idade<=15){
+        document.getElementById("calc20").innerHTML = "Nadador Adolescente"
+    }else if(idade>=16 && idade<=30){
+        document.getElementById("calc20").innerHTML = "Nadador Adulto"
+    }else if(idade>30){
+        document.getElementById("calc20").innerHTML = "Nadador Senior"
+    }else{
+        document.getElementById("calc20").innerHTML = "Ainda não se encaixa nas classificações"
+    }
+}
+function calculaProcedencia(){
+    let codigo = Number(document.getElementById("cod").value);
+    let preco = Number(document.getElementById("preco2").value);
+    switch(codigo){
+        case 1:
+            document.getElementById("calc21").innerHTML = "Procedência = Sul - Valor  R$" + preco
+            break;
+        case 2:
+            document.getElementById("calc21").innerHTML = "Procedência = Norte - Valor  R$" + preco
+            break;
+        case 3:
+            document.getElementById("calc21").innerHTML = "Procedência = Leste - Valor R$" + preco
+            break;
+        case 4:
+            document.getElementById("calc21").innerHTML = "Procedência = Oeste - Valor  R$" + preco
+            break;
+        default:
+            if(codigo == 5 || codigo == 6){
+                document.getElementById("calc21").innerHTML = "Procedência = Nordeste - Valor  R$" + preco 
+            }else if(codigo == 7 || codigo == 8 || codigo == 9){
+                document.getElementById("calc21").innerHTML = "Procedência = Sudeste - Valor  R$" + preco
+            }else if(codigo >=10 && codigo<=20){
+                document.getElementById("calc21").innerHTML = "Procedência = Centro-Oeste - Valor  R$" + preco
+            }else if(codigo >=21 && codigo<=30){
+                document.getElementById("calc21").innerHTML = "Procedência = Noroeste - Valor  R$" + preco
+            }
+    }
+}

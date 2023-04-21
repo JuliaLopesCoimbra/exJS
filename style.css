@@ -16,6 +16,7 @@ body * {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
+    
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button{
@@ -25,6 +26,8 @@ input::-webkit-inner-spin-button{
 
 table, th, td {
     border: 1px solid;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #container {
@@ -49,8 +52,10 @@ table, th, td {
 #exer01{
     width: 400px;
     height: 1100px;
+    margin-right: 10%;
     display: inline-block;
-    
+    color: #f8f7f8;
+    margin-top: 10%;
 
 }
 
@@ -58,11 +63,15 @@ table, th, td {
     width: 400px;
     height: 1100px;
     display: inline-block;
+    color: #f8f7f8;
 
 
 }
 #titulo{
     text-align: center;
+}
+#titulo2{
+    color: aliceblue;
 }
 #entradatext{
     text-align: center;
@@ -118,7 +127,8 @@ ul li a {
 }
 
 #dM, #dm,#sM,#sF,#T,#tab,#DataNasci,#ano,#nota1,#nota2,#nota3,#nota4,#nota1tab,#nota2tab,#n1M,#n2M,#n1,#n2,#n3,
-#n1E,#n2E,#n3E,#n1E2,#n2E2,#n3E2,#sal,#sal2,#SM{
+#n1E,#n2E,#n3E,#n1E2,#n2E2,#n3E2,#sal,#sal2,#SM,#carro,#SalarioNovo,#SalarioGratidao,#NovoPreco,#NovoSalario,#Investimento,#Investimento2,
+#preco,#codigo,#senha,#idade, #sexo,#h,#nadador,#cod,#preco2{
     display: flex;
     margin-bottom: 50px;
     margin-left: 30px;
