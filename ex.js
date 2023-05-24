@@ -43,8 +43,6 @@ function calculaIdade(){
     Date(document.getElementById('calc14a').innerHTML = "idade em meses = " + calc + " anos")
     Date(document.getElementById('calc14b').innerHTML = "idade em dias = " + calc + " anos")
     Date(document.getElementById('calc14c').innerHTML = "idade em semanas = " + calc + " anos")
-
-
 }
 
 
@@ -392,4 +390,213 @@ function calculaProcedencia(){
                 document.getElementById("calc21").innerHTML = "Procedência = Noroeste - Valor  R$" + preco
             }
     }
+}
+function calculaRisco(){
+    let idade = Number(document.getElementById("idadeRisco").value);
+    let peso = Number(document.getElementById("peso").value);
+    if(idade<20){
+        if(peso<60){
+            document.getElementById("calc22").innerHTML = "O grupo de risco dessa pessoa é 9 " 
+        }else if(peso >= 60 && peso <90){
+            document.getElementById("calc22").innerHTML = "O grupo de risco dessa pessoa é 8 "
+        }else if(peso >= 90 ){
+            document.getElementById("calc22").innerHTML = "O grupo de risco dessa pessoa é 7 "
+        }
+    }else if(idade >=20 && idade<50){
+        if(peso<60){
+            document.getElementById("calc22").innerHTML = "O grupo de risco dessa pessoa é 6 " 
+        }else if(peso >= 60 && peso <90){
+            document.getElementById("calc22").innerHTML = "O grupo de risco dessa pessoa é 5 "
+        }else if(peso >= 90 ){
+            document.getElementById("calc22").innerHTML = "O grupo de risco dessa pessoa é 4 "
+        }
+    }else if(idade >= 50){
+        if(peso<60){
+            document.getElementById("calc22").innerHTML = "O grupo de risco dessa pessoa é 3 " 
+        }else if(peso >= 60 && peso <90){
+            document.getElementById("calc22").innerHTML = "O grupo de risco dessa pessoa é 2 "
+        }else if(peso >= 90 ){
+            document.getElementById("calc22").innerHTML = "O grupo de risco dessa pessoa é 1 "
+        }
+    }
+}
+function calculaTabela(){
+    let qnt = Number(document.getElementById("qnt").value);
+    let cod = Number(document.getElementById("codigo").value);
+    let preco, unitario, nota, calc
+    if(cod>=1 && cod<=10){
+        preco = 10
+        nota = preco*qnt
+        unitario = nota/qnt
+        document.getElementById("calc23").innerHTML = "O preço total da nota ficou R$" +nota+",  cada produto no valor de R$" +unitario
+    }else if(cod>=11 && cod<=20){
+        preco = 15
+        nota = preco*qnt
+        unitario = nota/qnt
+        document.getElementById("calc23").innerHTML = "O preço total da nota ficou R$" +nota+",  cada produto no valor de R$" +unitario
+    }else if(cod>=21 && cod<=30){
+        preco = 20
+        nota = preco*qnt
+        unitario = nota/qnt
+        document.getElementById("calc23").innerHTML = "O preço total da nota ficou R$" +nota+",  cada produto no valor de R$" +unitario
+    }else if(cod>=31 && cod<=40){
+        preco = 30
+        nota = preco*qnt
+        unitario = nota/qnt
+        document.getElementById("calc23").innerHTML = "O preço total da nota ficou R$" +nota+",  cada produto no valor de R$" +unitario
+    }else{
+        document.getElementById("calc23").innerHTML = "não existe esse código de produto" 
+    }
+    
+    if(nota<250){
+        calc = nota-(nota*0.05)
+        desconto = (nota*0.05)
+        document.getElementById("calc23_2").innerHTML = "Recebendo o desconto de R$" + desconto + ", no valor da nota de R$"+nota+" , descontando com o desconto fica no valor de " + calc
+    }else if(nota>=250 && nota<500){
+        calc = nota-(nota*0.1)
+        desconto = (nota*0.1)
+        document.getElementById("calc23_2").innerHTML = "Recebendo o desconto de R$" + desconto + ", no valor da nota de R$"+nota+" , descontando com o desconto fica no valor de " + calc
+    }else if(nota>=500){
+        calc = nota-(nota*0.15)
+        desconto = (nota*0.15)
+        document.getElementById("calc23_2").innerHTML = "Recebendo o desconto de R$" + desconto + ", no valor da nota de R$"+nota+" , descontando com o desconto fica no valor de " + calc
+    }
+}
+function calculaCategoria(){
+    let preco = Number(document.getElementById("preco3").value);
+    let categoria = Number(document.getElementById("categoria").value);
+    let situacao = document.getElementById("situacao").value;
+    let valorProd, valorImposto,aumento,cla
+    //aumento
+    if(categoria == 1){
+        if(preco <=25 && preco>0){
+            valorProd = preco+(preco*0.05)
+            aumento =preco*0.05
+            document.getElementById("calc24").innerHTML = "O produto de valor R$"+preco+", sofreu aumento de R$"+aumento+" , ficando no valor total de R$"+valorProd
+        }else if(preco>25){
+            valorProd = preco+(preco*0.12)
+            aumento =preco*0.12
+            document.getElementById("calc24").innerHTML = "O produto de valor R$"+preco+", sofreu aumento de R$"+aumento+" , ficando no valor total de R$"+valorProd
+        }
+    }else if(categoria == 2){
+        if(preco <=25&& preco>0){
+            valorProd = preco+(preco*0.08)
+            aumento =preco*0.08
+            document.getElementById("calc24").innerHTML = "O produto de valor R$"+preco+", sofreu aumento de R$"+aumento+" , ficando no valor total de R$"+valorProd
+        }else if(preco>25){
+            valorProd = preco+(preco*0.15)
+            aumento =preco*0.15
+            document.getElementById("calc24").innerHTML = "O produto de valor R$"+preco+", sofreu aumento de R$"+aumento+" , ficando no valor total de R$"+valorProd
+        }
+    }else if(categoria == 3){
+        if(preco <=25&& preco>0){
+            valorProd = preco+(preco*0.1)
+            aumento =preco*0.1
+            document.getElementById("calc24").innerHTML = "O produto de valor R$"+preco+", sofreu aumento de R$"+aumento+" , ficando no valor total de R$"+valorProd
+        }else if(preco>25){
+            valorProd = preco+(preco*0.18)
+            aumento =preco*0.18
+            document.getElementById("calc24").innerHTML = "O produto de valor R$"+preco+", sofreu aumento de R$"+aumento+" , ficando no valor total de R$"+valorProd
+        }
+    }else{
+        document.getElementById("calc24").innerHTML = "Categoria Inválida"
+    }
+
+
+
+    //imposto
+    if(categoria == 2 && situacao == "R"){
+        valorImposto = preco*0.05
+        document.getElementById("calc24_2").innerHTML = "Esse produto possui o valor R$"+valorImposto+" de imposto"
+    }else if(categoria == 2 && situacao == "r"){
+        valorImposto = preco*0.05
+        document.getElementById("calc24_2").innerHTML = "Esse produto possui o valor R$"+valorImposto+" de imposto"
+    }else if(situacao == "R"&& categoria == 1){
+        valorImposto = preco*0.08
+        document.getElementById("calc24_2").innerHTML = "Esse produto possui o valor R$"+valorImposto+" de imposto"
+    }else if(situacao == "r" && categoria == 1){
+        valorImposto = preco*0.08
+        document.getElementById("calc24_2").innerHTML = "Esse produto possui o valor R$"+valorImposto+" de imposto"
+    }else if(situacao == "R" && categoria ==3){
+        valorImposto = preco*0.08
+        document.getElementById("calc24_2").innerHTML = "Esse produto possui o valor R$"+valorImposto+" de imposto"
+    }else if(situacao == "r" && categoria ==3){
+        valorImposto = preco*0.08
+        document.getElementById("calc24_2").innerHTML = "Esse produto possui o valor R$"+valorImposto+" de imposto"
+    }else if(situacao == "N" && categoria == 1){
+        valorImposto = preco*0.08
+        document.getElementById("calc24_2").innerHTML = "Esse produto possui o valor R$"+valorImposto+" de imposto"
+    }else if(situacao == "n" && categoria == 1 ){
+        valorImposto = preco*0.08
+        document.getElementById("calc24_2").innerHTML = "Esse produto possui o valor R$"+valorImposto+" de imposto"
+    }else if(situacao == "N" && categoria == 3){
+        valorImposto = preco*0.08
+        document.getElementById("calc24_2").innerHTML = "Esse produto possui o valor R$"+valorImposto+" de imposto"
+    }else if(situacao == "n" && categoria == 3 ){
+        valorImposto = preco*0.08
+        document.getElementById("calc24_2").innerHTML = "Esse produto possui o valor R$"+valorImposto+" de imposto"
+    }else{
+        document.getElementById("calc24_2").innerHTML = "Imposto Inválido"
+    }
+
+
+
+
+    //classificação
+    if(valorProd<=50){
+        cla = "Barato"
+    }else if(valorProd>50 && valorProd<120){
+        cla = "Normal"
+    }else if(valorProd>=120){
+        cla = "Caro"
+    }else{
+        cla = "O programa não conseguiu entender os seus dados"
+    }
+    document.getElementById("calc24_3").innerHTML = "Esse produto possui a classificação como "+cla+", devido ao seu preço"
+
+}
+function calculaGrati(){
+    let faltou = Number(document.getElementById("faltou").value);
+    let extra = Number(document.getElementById("extra").value);
+    let calc, calc1
+    calc = extra-((2/3)*(faltou))
+    calc1 = calc*60
+    if(calc1>=2400){
+        document.getElementById("calc25").innerHTML = "Gratificação de R$500"
+    }else if(calc1>1800 && calc1<2400){
+        document.getElementById("calc25").innerHTML = "Gratificação de R$400"
+    }else if(calc1>=1200 && calc1<1800){
+        document.getElementById("calc25").innerHTML = "Gratificação de R$300"
+    }else if(calc1>=600 && calc1<1200){
+        document.getElementById("calc25").innerHTML = "Gratificação de R$200"
+    }else if(calc1<600){
+        document.getElementById("calc25").innerHTML = "Gratificação de R$100"
+    }
+}
+//repeticaoExemplo
+function calculaMediaIdades(){
+    let conta = 1
+    let total = 0
+     
+    while (conta <= 10){
+        let idade = Number(prompt('Informe a idade'))
+        conta = conta +1
+        total = total + idade
+    }
+    
+    console.log('a media é ' +total/10)
+}
+//repeticaoExemplo
+function calculaMediaIdades(){
+    let i = Number(prompt('Informe a qnt de idades'))
+    let conta = 1
+    let total = 0
+     
+    while (conta <= i){
+        let idade = Number(prompt('Informe a idade'))
+        conta = conta +1
+        total = total + idade
+    }
+    
+    console.log('a media é ' +total/10)
 }

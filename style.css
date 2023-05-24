@@ -1,19 +1,14 @@
 body {
     display: grid;
     height: 100vh;
-
-}
-
-body {
     background: linear-gradient(0.9turn, #fd2bc9, #000000);
     background-position: top center;
-    background-size: 2500px 1500px;
-
-    
+    background-size: 10000px 10000px;
+    background-repeat: no-repeat;
+    font-family: 'Lato', sans-serif;
 }
 
 body * {
-    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     
@@ -67,6 +62,12 @@ table, th, td {
 
 
 }
+#lista1{
+    font: normal 900 2rem 'Lato', sans-serif;
+}
+#lista2{
+    font: normal 900 2rem 'Lato', sans-serif;
+}
 #titulo{
     text-align: center;
 }
@@ -78,7 +79,7 @@ table, th, td {
 }
 #quad{
     width: 400px;
-    height: 600px;
+    height: 700px;
     border-radius: 10%;
     background-color: aliceblue;
     margin-left: 390px;
@@ -106,29 +107,26 @@ ul {
    list-style: none;
    display: flex;
    flex-direction: column; /* flexibilidade da coluna*/
-   gap: 16px; /* espaço entre cada um da lista*/
-   padding: 24px 0px;
+   gap: 25px; /* espaço entre cada um da lista*/
+   padding: 24px 100px;
+
 }
 ul li a {
     display: flex;
     align-items: center; /*alinhamento na vertical */
     justify-content: center; /*alinhamento na horiz */
     padding: 16px 24px; /* 16px é top e bottom e 24px é right e left*/
-
-    background: linear-gradient(0.9turn, #f8f7f8, #9e9595);/* 10% de transparencia */
-    border: black;/* 50% de transparencia */     /**/
-    border-radius: 8px;
-    backdrop-filter: blur(4px); /*nem todo navegador aceita blur*/
-    -webkit-backdrop-filter: blur(4px);
-
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.2s;
+    background: linear-gradient(0.9turn, #f8f7f8, #ffffff);/* 10% de transparencia */
+    border: solid 2px black;/* 50% de transparencia */     /**/
+    border-radius: 30px;
+    
+    
 }
 
 #dM, #dm,#sM,#sF,#T,#tab,#DataNasci,#ano,#nota1,#nota2,#nota3,#nota4,#nota1tab,#nota2tab,#n1M,#n2M,#n1,#n2,#n3,
 #n1E,#n2E,#n3E,#n1E2,#n2E2,#n3E2,#sal,#sal2,#SM,#carro,#SalarioNovo,#SalarioGratidao,#NovoPreco,#NovoSalario,#Investimento,#Investimento2,
-#preco,#codigo,#senha,#idade, #sexo,#h,#nadador,#cod,#preco2{
+#preco,#codigo,#senha,#idade, #sexo,#h,#nadador,#cod,#preco2,#peso,#idadeRisco,#codigo,#qnt,#preco3, #categoria,#situacao,
+#extra,#faltou,#ingresso, #tabuada{
     display: flex;
     margin-bottom: 50px;
     margin-left: 30px;
